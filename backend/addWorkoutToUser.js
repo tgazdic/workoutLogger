@@ -1,7 +1,7 @@
 import db from './firebase.js';
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
-async function addWorkout(userId, workoutId, workoutData) {
+async function addWorkoutToUser(userId, workoutId, workoutData) {
   try {
     // Reference to the parent user document
     const userRef = doc(db, "users", userId);
@@ -25,11 +25,10 @@ async function addWorkout(userId, workoutId, workoutData) {
 }
 
 // Example Usage
-addWorkout("userID1", "workout123", {
-  workoutId: "workout123",
+addWorkoutToUser("userID1", "workout123", {
   date: new Date().toISOString(),
-  workoutType: "Cardio",
-  workoutDetails: "Morning run in the park.",
-  notes: "Wrist hurts today",
-  metrics: { duration: 60, weight: 70, sleep: 7, PRE: 5 },
+  workoutType: "Endurance",
+  workoutDetails: "7/3 repeaters",
+  notes: "Wrist doesnt hurt anymore",
+  metrics: { sleep: 7, motivationBeforeSession: 7, exhaustionBeforeSession: 3, exhaustionAfterSession: 4, duration: 60, weight: 70},
 });

@@ -3,14 +3,10 @@ import { doc, setDoc } from "firebase/firestore"; // Firestore methods
 
 // Predefined list of possible workouts
 const workoutTypes = [
-  { id: "cardio", name: "Cardio" },
+  { id: "endurance", name: "Endurance" },
   { id: "strength", name: "Strength" },
-  { id: "yoga", name: "Yoga" },
-  { id: "hiit", name: "HIIT" },
-  { id: "pilates", name: "Pilates" },
-  { id: "cycling", name: "Cycling" },
-  { id: "swimming", name: "Swimming" },
-  { id: "running", name: "Running" }
+  { id: "outdoors", name: "Outdoors" },
+  { id: "conditioning", name: "Conditioning" }
 ];
 
 // Function to add workout types to Firestore
